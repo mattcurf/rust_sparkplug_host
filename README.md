@@ -1,5 +1,7 @@
 # Rust Sparkplug B Primary Host
 
+[![PR Verify](https://github.com/mattcurf/rust_sparkplug_host/actions/workflows/pr-verify.yml/badge.svg)](https://github.com/mattcurf/rust_sparkplug_host/actions/workflows/pr-verify.yml)
+
 A Rust baseline for a Sparkplug B Primary Host Application. The binary opens an MQTT session (plain or TLS), publishes the host `STATE` birth/death per the Sparkplug 3.0 rules, subscribes to the Sparkplug namespace, decodes live node/device traffic, tracks in-memory node/device/session state, publishes automatic `NCMD` rebirth requests on sequence gaps or malformed session ordering, and prints effective metric changes to stdout.
 
 For more information about Eclipse Sparkplug B, see https://github.com/eclipse-sparkplug/sparkplug and https://sparkplug.eclipse.org/. (Sparkplug®, Sparkplug Compatible, and the Sparkplug Logo are trademarks of the Eclipse Foundation.)
@@ -13,11 +15,10 @@ This repo is a quick, fun Sparkplug side project of mine, not a polished product
 - if you want to build something production-facing from it, plan to review the configuration, credential handling, dependency licensing, observability, testing, persistence, and operational failure paths carefully
 
 ## License Notes
-The original project code in this repository is licensed under Apache 2.0. This repository also includes and depends on third-party material under other licenses, so it should be treated as mixed-license rather than "everything is Apache-2.0".
+The original project code in this repository is licensed under Apache 2.0. Dependencies fetched via Cargo remain subject to their own license terms.
 
-- the Eclipse Sparkplug specification is published under the Eclipse Public License 2.0 — see https://www.eclipse.org/legal/epl-2.0/ and the project pages linked above
 - the `sparkplug-rs`, `rumqttc`, `tokio`, `clap`, `serde`, `serde_json`, and `anyhow` crates pulled in via `Cargo.toml` each ship with their own license terms — review them before redistributing
-- do not assume the vendored Sparkplug schema, the Eclipse specification text, or any crate source pulled by Cargo are covered by this repository's Apache 2.0 license
+- do not assume any crate source pulled by Cargo is covered by this repository's Apache 2.0 license
 
 ## Implemented Scope
 - `config`: CLI parsing, `mqtt://` / `mqtts://` URL parsing, host ID wildcard validation, optional username / password / `--password-env`, optional CA file, optional insecure-TLS test mode
