@@ -4,8 +4,6 @@ A Rust baseline for a Sparkplug B Primary Host Application. The binary opens an 
 
 For more information about Eclipse Sparkplug B, see https://github.com/eclipse-sparkplug/sparkplug and https://sparkplug.eclipse.org/. (Sparkplug®, Sparkplug Compatible, and the Sparkplug Logo are trademarks of the Eclipse Foundation.)
 
-The Sparkplug 3.0.0 specification used as the scaffold reference is vendored here as [sparkplug-specification-3.0.0.txt](./sparkplug-specification-3.0.0.txt).
-
 ## Project Notes
 This repo is a quick, fun Sparkplug side project of mine, not a polished production host application!
 
