@@ -1,0 +1,17 @@
+# Rust build output
+/target/
+
+# macOS
+.DS_Store
+
+# Editor temp files
+*.swp
+*.swo
+*~
+
+# Optional editor settings
+.vscode/
+.idea/
+
+# Rare rustfmt backup files
+**/*.rs.bk
