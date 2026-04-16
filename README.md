@@ -16,9 +16,7 @@ This repo is a quick, fun Sparkplug side project of mine, not a polished product
 
 ## License Notes
 The original project code in this repository is licensed under Apache 2.0. Dependencies fetched via Cargo remain subject to their own license terms.
-
-- the `sparkplug-rs`, `rumqttc`, `tokio`, `clap`, `serde`, `serde_json`, and `anyhow` crates pulled in via `Cargo.toml` each ship with their own license terms — review them before redistributing
-- do not assume any crate source pulled by Cargo is covered by this repository's Apache 2.0 license
+- see `THIRD_PARTY_NOTICES.md` for vendored and managed dependency license notes
 
 ## Implemented Scope
 - `config`: CLI parsing, `mqtt://` / `mqtts://` URL parsing, host ID wildcard validation, optional username / password / `--password-env`, optional CA file, optional insecure-TLS test mode
