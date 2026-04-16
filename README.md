@@ -1,6 +1,6 @@
 # Rust Sparkplug B Primary Host
 
-[![PR Verify](https://github.com/mattcurf/rust_sparkplug_host/actions/workflows/pr-verify.yml/badge.svg)](https://github.com/mattcurf/rust_sparkplug_host/actions/workflows/pr-verify.yml)
+[![Build](https://github.com/mattcurf/rust_sparkplug_host/actions/workflows/build.yml/badge.svg)](https://github.com/mattcurf/rust_sparkplug_host/actions/workflows/build.yml)
 
 A Rust baseline for a Sparkplug B Primary Host Application. The binary opens an MQTT session (plain or TLS), publishes the host `STATE` birth/death per the Sparkplug 3.0 rules, subscribes to the Sparkplug namespace, decodes live node/device traffic, tracks in-memory node/device/session state, publishes automatic `NCMD` rebirth requests on sequence gaps or malformed session ordering, and prints effective metric changes to stdout.
 
